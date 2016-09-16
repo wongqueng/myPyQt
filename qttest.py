@@ -4,7 +4,7 @@ from PyQt4.QtCore import *
 import sys
 import  time
 import threading
-import requests
+import requests,json
 import pymongo
 QTextCodec.setCodecForTr(QTextCodec.codecForName("utf8"))
 
