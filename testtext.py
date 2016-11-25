@@ -1,4 +1,4 @@
-#-*-coding:UTF-8-*-
+# -*-coding:UTF-8-*-
 import sys
 import re
 import urllib
@@ -7,12 +7,10 @@ import threading
 import os
 from PyQt4 import QtCore, QtGui
 
-
 def clear():
 	for filename in os.listdir('C:\Python27\youmin'.decode("utf-8")):
 		# print filename
 		os.remove(os.path.join('C:\Python27\youmin', filename))
-
 clear()
 src = '<img class="picact".*?src="(.*?)"'
 detail1 = '<img class="picact".*?<br>(.*?)</p>'
@@ -89,6 +87,7 @@ def getbaseurl():
 	urllist1 = re.findall(urs1, s)  # 查找所有最新图片发布页网址
 	urllist2 = re.findall(urs2, s)
 	divlist = urllist1 + urllist2
+
 
 	for i in divlist:
 		urllist.append(re.search(herfhtm, i).group())
